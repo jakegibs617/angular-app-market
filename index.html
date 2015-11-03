@@ -5,7 +5,6 @@
     <link href="css/main.css" rel="stylesheet" />
 
     <!-- Include the AngularJS library -->
-    <script src="shared/angular-mock.js"></script>
     <script src="shared/angular.min.js"></script>
 
   </head>
@@ -15,11 +14,12 @@
         <h1>App Market</h1>
       </div>
     </div>
-
+    
     <div class="main" ng-controller="MainController">
       <div class="container">
-        <div class="card" ng-repeat="app in apps">
+         <div class="card" ng-repeat="app in apps">
           <app-info info="app"></app-info>
+           <install-app></install-app>
         </div>
       </div>
     </div>
@@ -33,6 +33,7 @@
     <!-- Directives -->
     <script src="js/directives/appInfo.js"></script>
     <script src="js/directives/installApp.js"></script>
+
 
   </body>
 </html>
